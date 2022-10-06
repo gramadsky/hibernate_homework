@@ -12,16 +12,18 @@ public class Route {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column
-    private String departure;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "departure")
+    private City departure;
 
-    @Column
-    private String arrival;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "arrival")
+    private City arrival;
 
-    @OneToMany(mappedBy = "route",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "route", cascade = CascadeType.ALL)
     private List<Ticket> tickets;
 
-    public String toString(){
-        return id + " " + departure + " "+ arrival;
+    public String toString() {
+        return id + " - " + departure + " - " + arrival;
     }
 }

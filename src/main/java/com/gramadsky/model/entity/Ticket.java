@@ -11,7 +11,7 @@ public class Ticket {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "user")
     private User user;
 
@@ -23,6 +23,6 @@ public class Ticket {
     private String passport;
 
     public String toString(){
-        return id + " " + user + " " + route + " " + passport;
+        return id + " = " + user + " - " + route + " " + passport;
     }
 }

@@ -11,19 +11,8 @@ import java.util.List;
 public class DefaultRepositoryImpl<T> implements DefaultRepository<T> {
 
     @Override
-    public void save(T entity) {
+    public void saveOrUpdate(T entity) {
 
-        Session session = DataSource.getInstance().getSession();
-
-        Transaction transaction = session.beginTransaction();
-
-        session.saveOrUpdate(entity);
-
-        transaction.commit();
-    }
-
-    @Override
-    public void update(T entity) {
         Session session = DataSource.getInstance().getSession();
 
         Transaction transaction = session.beginTransaction();

@@ -20,7 +20,7 @@ public class Airport {
 //        user.setName("Bob");
 //        user.setSurname("Truck");
 //        user.setRole(role);
-//        userRepository.save(user);
+//        userRepository.saveOrUpdate(user);
 
 //        List<User> users = userRepository.findAll();
 //        System.out.println(users);
@@ -30,11 +30,11 @@ public class Airport {
 //        userRepository.delete(user);
 
 //        User user = new User();
-//        user.setId(1133);
+//        user.setId(1136);
 //        user.setName("Petya");
 //        user.setSurname("Aist");
-//        user.setRole(4);
-//        userRepository.update(user);
+//        user.setRole(role);
+//        userRepository.saveOrUpdate(user);
 
         CityRepository cityRepository = new CityRepositoryImpl();
 //        List<City> cities = cityRepository.findAll();
@@ -55,7 +55,7 @@ public class Airport {
 //        AirCompany airCompany = new AirCompany();
 //        airCompany.setIdAirCompany(4);
 //        airCompany.setAirCompanyName("Emirates");
-//        airCompanyRepository.update(airCompany);
+//        airCompanyRepository.saveOrUpdate(airCompany);
 
         AirplaneRepository airplaneRepository = new AirplaneRepositoryImpl();
 
@@ -74,7 +74,7 @@ public class Airport {
 //                .airCompany(airCompany)
 //                .build();
 //
-//        airplaneRepository.save(airplane);
+//        airplaneRepository.saveOrUpdate(airplane);
 
         TicketRepository ticketRepository = new TicketRepositoryImpl();
 //        List<Ticket> tickets = ticketRepository.findAll();
