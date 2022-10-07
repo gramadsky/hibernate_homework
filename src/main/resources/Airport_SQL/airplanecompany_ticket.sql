@@ -29,7 +29,8 @@ CREATE TABLE `ticket` (
   `passport` varchar(256) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `route_id_idx` (`route`),
-  CONSTRAINT `idroute` FOREIGN KEY (`route`) REFERENCES `route` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `idroute` FOREIGN KEY (`route`) REFERENCES `route` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  `iduser` FOREIGN KEY (`user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=510 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

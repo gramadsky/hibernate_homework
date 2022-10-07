@@ -24,8 +24,8 @@ DROP TABLE IF EXISTS `route`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `route` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `departure` varchar(256) NOT NULL,
-  `arrival` varchar(256) NOT NULL,
+  `departure` int NOT NULL,
+  `arrival` int NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=112 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -36,7 +36,7 @@ CREATE TABLE `route` (
 
 LOCK TABLES `route` WRITE;
 /*!40000 ALTER TABLE `route` DISABLE KEYS */;
-INSERT INTO `route` VALUES (100,'London','Rome'),(101,'Minsk','Manchester'),(102,'Vienna','Lyon'),(103,'Rome','Glasgow'),(104,'Paris','Brussels'),(105,'Manchester','Munich '),(106,'Munich ','Milan'),(107,'Minsk','Paris'),(108,'Brussels','Minsk'),(109,'Milan','Manchester'),(110,'Glasgow','Hamburg'),(111,'Hamburg','Lyon');
+INSERT INTO `route` VALUES (100,1,10),(101,3,12),(102,5,8),(103,10,13),(104,4,11),(105,12,7),(106,7,9),(107,3,4),(108,11,3),(109,9,12),(110,13,6),(111,6,8);
 /*!40000 ALTER TABLE `route` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-10-04 20:05:24
+-- Dump completed on 2022-10-07 22:47:15
